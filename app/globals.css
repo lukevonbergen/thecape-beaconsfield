@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  background-color: #ffffff;
+  color: #2D2D2D;
+  font-family: var(--font-nunito), 'Nunito Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #2D2D2D;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar with sage green */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D4E8D1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94B087;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a9a6d;
+}
+
+/* Fade in animation for scroll effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Primary button - pink CTA */
+.btn-primary {
+  @apply bg-[#E9BFBD] text-dark px-6 py-3 font-medium rounded-full transition-all duration-300;
+}
+
+.btn-primary:hover {
+  @apply bg-[#dba9a7] transform -translate-y-0.5 shadow-lg;
+}
+
+/* Secondary button - outlined */
+.btn-secondary {
+  @apply bg-transparent border-2 border-primary text-primary px-6 py-3 font-medium rounded-full transition-all duration-300;
+}
+
+.btn-secondary:hover {
+  @apply bg-primary text-white transform -translate-y-0.5;
+}
+
+/* Pink button variant */
+.btn-pink {
+  @apply bg-secondary text-dark px-6 py-3 font-medium rounded-full transition-all duration-300;
+}
+
+.btn-pink:hover {
+  @apply bg-[#e8b0b0] transform -translate-y-0.5 shadow-lg;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  @apply transform -translate-y-2 shadow-card;
+}
+
+/* Decorative sage line */
+.sage-line {
+  @apply w-16 h-1 bg-primary rounded-full;
+}
+
+.sage-line-center {
+  @apply w-16 h-1 bg-primary mx-auto rounded-full;
+}
+
+/* Section padding */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+/* Container max width */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Polka dot pattern background */
+.bg-pattern-polka {
+  background-color: #FFF9F0;
+  background-image: radial-gradient(circle, #F2C4C4 2px, transparent 2px),
+                    radial-gradient(circle, #D4E8D1 1.5px, transparent 1.5px);
+  background-size: 40px 40px, 60px 60px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Confetti pattern background */
+.bg-pattern-confetti {
+  background-color: #FFF9F0;
+  background-image:
+    radial-gradient(circle at 20% 30%, #F2C4C4 3px, transparent 3px),
+    radial-gradient(circle at 70% 20%, #F9E5A0 2px, transparent 2px),
+    radial-gradient(circle at 40% 70%, #D4E8D1 2.5px, transparent 2.5px),
+    radial-gradient(circle at 80% 60%, #94B087 2px, transparent 2px),
+    radial-gradient(circle at 10% 80%, #F2C4C4 2px, transparent 2px);
+  background-size: 100px 100px;
+}
+
+/* Checkered border pattern */
+.border-checkered {
+  border: 8px solid;
+  border-image: repeating-linear-gradient(
+    45deg,
+    #94B087 0,
+    #94B087 10px,
+    white 10px,
+    white 20px
+  ) 8;
+}
+
+/* Playful checkered border - pink variant */
+.border-checkered-pink {
+  border: 8px solid;
+  border-image: repeating-linear-gradient(
+    45deg,
+    #F2C4C4 0,
+    #F2C4C4 10px,
+    white 10px,
+    white 20px
+  ) 8;
+}
+
+/* Scrolling banner animation */
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-banner {
+  animation: scrollBanner 30s linear infinite;
+}
+
+/* Hero overlay gradient */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* Sage green overlay for full-width sections */
+.sage-overlay {
+  background: rgba(148, 176, 135, 0.9);
+}
+
+/* Product card image zoom on hover */
+.product-card-image {
+  @apply transition-transform duration-500;
+}
+
+.product-card:hover .product-card-image {
+  @apply scale-110;
+}
+
+/* Newsletter input styling */
+.newsletter-input {
+  @apply bg-white border-2 border-primary rounded-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all;
+}
+
+/* Menu dietary badges */
+.dietary-badge {
+  @apply inline-flex items-center justify-center w-6 h-6 text-xs font-bold rounded-full;
+}
+
+.dietary-badge-v {
+  @apply bg-[#D4E8D1] text-[#2D2D2D];
+}
+
+.dietary-badge-vg {
+  @apply bg-[#94B087] text-white;
+}
+
+.dietary-badge-gf {
+  @apply bg-[#F9E5A0] text-[#2D2D2D];
+}
+
+/* Category filter tabs */
+.category-tab {
+  @apply px-4 py-2 rounded-full font-medium transition-all duration-300 cursor-pointer;
+}
+
+.category-tab-active {
+  @apply bg-primary text-white;
+}
+
+.category-tab-inactive {
+  @apply bg-mint text-dark hover:bg-primary hover:text-white;
+}
+
+/* Location card styling */
+.location-card {
+  @apply bg-white rounded-2xl overflow-hidden shadow-soft transition-all duration-300;
+}
+
+.location-card:hover {
+  @apply shadow-card;
+}
+
+/* Decorative shapes */
+.shape-circle {
+  @apply rounded-full;
+}
+
+.shape-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* Image placeholder shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Hide scrollbar for horizontal scroll sections */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive text sizes for headings */
+.heading-xl {
+  @apply text-4xl md:text-5xl lg:text-6xl font-heading;
+}
+
+.heading-lg {
+  @apply text-3xl md:text-4xl lg:text-5xl font-heading;
+}
+
+.heading-md {
+  @apply text-2xl md:text-3xl font-heading;
+}
+
+.heading-sm {
+  @apply text-xl md:text-2xl font-heading;
+}
+
+/* Subheading style */
+.subheading {
+  @apply text-lg text-gray-600 font-normal max-w-2xl;
+}

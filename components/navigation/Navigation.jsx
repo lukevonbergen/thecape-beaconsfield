@@ -1,0 +1,145 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { Menu, X } from 'lucide-react';
+import { siteConfig } from '@/config/siteConfig';
+
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  return (
+    <>
+      {/* Top Banner Bar */}
+      {siteConfig.banner.show && (
+        <div className="bg-[#FEF8EE] text-dark py-2 overflow-hidden">
+          <div className={siteConfig.banner.scrolling ? 'animate-scroll-banner whitespace-nowrap' : 'text-center'}>
+            {siteConfig.banner.scrolling ? (
+              <>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+                <span className="inline-block px-8 text-sm font-medium">
+                  {siteConfig.banner.text}
+                </span>
+              </>
+            ) : (
+              <span className="text-sm font-medium">{siteConfig.banner.text}</span>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Main Navigation */}
+      <header
+        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
+          scrolled ? 'shadow-md' : 'shadow-sm'
+        }`}
+      >
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center flex-shrink-0">
+              <Image
+                src={siteConfig.logo.src}
+                alt={siteConfig.logo.alt}
+                width={180}
+                height={60}
+                className="h-14 sm:h-16 w-auto"
+                priority
+              />
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {siteConfig.nav.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-medium transition-colors duration-300 hover:text-primary ${
+                    pathname === link.href
+                      ? 'text-primary'
+                      : 'text-dark'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA Button - Desktop */}
+            <div className="hidden lg:block">
+              <Link
+                href={siteConfig.nav.cta.href}
+                className="bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-[#7a9a6d] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                {siteConfig.nav.cta.text}
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden p-2 text-dark"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div
+            className={`lg:hidden overflow-hidden transition-all duration-300 ${
+              isOpen ? 'max-h-96 pb-6' : 'max-h-0'
+            }`}
+          >
+            <div className="space-y-1 pt-4 border-t border-gray-100">
+              {siteConfig.nav.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-300 ${
+                    pathname === link.href
+                      ? 'bg-mint text-primary'
+                      : 'text-dark hover:bg-mint hover:text-primary'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href={siteConfig.nav.cta.href}
+                onClick={() => setIsOpen(false)}
+                className="block text-center bg-primary text-white py-3 px-4 rounded-full font-medium hover:bg-[#7a9a6d] transition-colors duration-300 mt-4"
+              >
+                {siteConfig.nav.cta.text}
+              </Link>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </>
+  );
+}
