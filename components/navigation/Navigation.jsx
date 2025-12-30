@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Calendar } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 
 export default function Navigation() {
@@ -25,35 +25,18 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Top Banner Bar */}
+      {/* Announcement Banner */}
       {siteConfig.banner.show && (
-        <div className="bg-[#FEF8EE] text-dark py-2 overflow-hidden">
-          <div className={siteConfig.banner.scrolling ? 'animate-scroll-banner whitespace-nowrap' : 'text-center'}>
-            {siteConfig.banner.scrolling ? (
-              <>
-                <span className="inline-block px-8 text-sm font-medium">
-                  {siteConfig.banner.text}
-                </span>
-                <span className="inline-block px-8 text-sm font-medium">
-                  {siteConfig.banner.text}
-                </span>
-                <span className="inline-block px-8 text-sm font-medium">
-                  {siteConfig.banner.text}
-                </span>
-                <span className="inline-block px-8 text-sm font-medium">
-                  {siteConfig.banner.text}
-                </span>
-              </>
-            ) : (
-              <span className="text-sm font-medium">{siteConfig.banner.text}</span>
-            )}
-          </div>
+        <div className="bg-primary text-white py-2.5 text-center">
+          <p className="text-sm font-medium tracking-wide px-4">
+            {siteConfig.banner.text}
+          </p>
         </div>
       )}
 
       {/* Main Navigation */}
       <header
-        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
+        className={`sticky top-0 z-50 bg-background transition-all duration-300 ${
           scrolled ? 'shadow-md' : 'shadow-sm'
         }`}
       >
@@ -90,12 +73,15 @@ export default function Navigation() {
 
             {/* CTA Button - Desktop */}
             <div className="hidden lg:block">
-              <Link
+              <a
                 href={siteConfig.nav.cta.href}
-                className="bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-[#7a9a6d] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-[#a85430] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               >
+                <Calendar size={18} />
                 {siteConfig.nav.cta.text}
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -114,7 +100,7 @@ export default function Navigation() {
               isOpen ? 'max-h-96 pb-6' : 'max-h-0'
             }`}
           >
-            <div className="space-y-1 pt-4 border-t border-gray-100">
+            <div className="space-y-1 pt-4 border-t border-accent">
               {siteConfig.nav.links.map((link) => (
                 <Link
                   key={link.href}
@@ -122,20 +108,23 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`block py-3 px-4 rounded-lg font-medium transition-colors duration-300 ${
                     pathname === link.href
-                      ? 'bg-mint text-primary'
-                      : 'text-dark hover:bg-mint hover:text-primary'
+                      ? 'bg-accent text-primary'
+                      : 'text-dark hover:bg-accent hover:text-primary'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link
+              <a
                 href={siteConfig.nav.cta.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="block text-center bg-primary text-white py-3 px-4 rounded-full font-medium hover:bg-[#7a9a6d] transition-colors duration-300 mt-4"
+                className="flex items-center justify-center gap-2 bg-primary text-white py-3 px-4 rounded-full font-medium hover:bg-[#a85430] transition-colors duration-300 mt-4"
               >
+                <Calendar size={18} />
                 {siteConfig.nav.cta.text}
-              </Link>
+              </a>
             </div>
           </div>
         </nav>

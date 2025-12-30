@@ -1,25 +1,23 @@
 // config/siteConfig.js
 export const siteConfig = {
-  siteName: 'Nena Craft Bakery',
+  siteName: 'The Cape',
   logo: {
-    text: 'Nena Craft Bakery',
-    src: '/logo/nena-logo.png',
-    alt: 'Nena Craft Bakery Logo',
+    text: 'The Cape',
+    src: '/logo/cape-logo.avif',
+    alt: 'The Cape Logo',
     height: 60,
   },
   metadata: {
     base: {
-      title: 'Nena Craft Bakery – Sourdough Bakery, Cafe & Speciality Coffee',
+      title: 'The Cape – South African Café & Restaurant | Beaconsfield',
       description:
-        'Artisan sourdough bakery, cafe and speciality coffee in Buckinghamshire. Freshly baked pastries, celebration cakes, and locally sourced seasonal ingredients.',
+        'The Cape restaurant in Beaconsfield - your local neighbourhood café serving South African-inspired breakfasts, lunches & homebaked treats for over 19 years.',
       icons: {
         icon: [
-          { url: '/logo/favicon.ico', sizes: 'any' },
-          { url: '/logo/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-          { url: '/logo/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+          { url: '/logo/favicon.png', type: 'image/png' },
         ],
         apple: [
-          { url: '/logo/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+          { url: '/logo/favicon.png', type: 'image/png' },
         ],
       },
       manifest: '/site.webmanifest',
@@ -27,524 +25,478 @@ export const siteConfig = {
   },
 
   fonts: {
-    base: `'Nunito Sans', sans-serif`,
-    heading: `'Cormorant Garamond', serif`,
-    baseClass: 'font-nunito',
-    headingClass: 'font-cormorant',
-    google: { base: 'Nunito Sans', heading: 'Cormorant Garamond', accent: 'Nunito Sans' },
+    base: `'Lato', sans-serif`,
+    heading: `'Playfair Display', serif`,
+    accent: `'Dancing Script', cursive`,
+    baseClass: 'font-lato',
+    headingClass: 'font-playfair',
+    accentClass: 'font-dancing',
+    google: { base: 'Lato', heading: 'Playfair Display', accent: 'Dancing Script' },
   },
 
-  // Warm bakery color scheme
+  // The Cape color scheme - warm, earthy South African tones
   brand: {
-    primary: '#94B087', // sage green from logo
-    secondary: '#F2C4C4', // warm pink/blush
-    accent: '#F9E5A0', // soft yellow
-    mint: '#D4E8D1', // light mint
+    primary: '#C4653A', // warm terracotta/rust
+    secondary: '#5C6B4A', // deep olive/sage
+    accent: '#F5EDE0', // warm cream
     dark: '#2D2D2D', // dark text
-    background: '#FFFFFF', // clean white
+    background: '#FFFBF7', // off-white/warm white
   },
 
   styles: {
-    bgLight: 'bg-white',
-    bgPrimary: 'bg-[#94B087]',
-    bgSecondary: 'bg-[#F2C4C4]',
-    bgAccent: 'bg-[#F9E5A0]',
-    bgMint: 'bg-[#D4E8D1]',
-    textPrimary: 'text-[#2D2D2D]',
+    bgLight: 'bg-background',
+    bgPrimary: 'bg-primary',
+    bgSecondary: 'bg-secondary',
+    bgAccent: 'bg-accent',
+    textPrimary: 'text-dark',
     textMuted: 'text-[#666666]',
     textLight: 'text-white',
-    borderLight: 'border-[#D4E8D1]',
-    borderPrimary: 'border-[#94B087]',
+    borderLight: 'border-accent',
+    borderPrimary: 'border-primary',
   },
 
   banner: {
     show: true,
-    text: 'Sourdough Bakery, Cafe & Speciality Coffee • local • seasonal • independent',
-    scrolling: true,
+    text: 'THE CAPE IS OPEN FOR DINE IN MONDAY - SATURDAY 8AM - 4PM | SUNDAY 9.30AM - 3PM',
+    scrolling: false,
   },
 
   nav: {
     links: [
       { label: 'Home', href: '/' },
-      { label: 'About', href: '/about' },
-      { label: 'Pastries', href: '/pastries' },
       { label: 'Menu', href: '/menu' },
-      { label: 'Locations', href: '/locations' },
+      { label: 'Events', href: '/events' },
     ],
     cta: {
-      text: 'Order Now',
-      href: '/locations',
+      text: 'Make a Booking',
+      href: 'https://book.mysimpleerb.com/1019/the-cape-restaurant/?__type=text&__target=nw',
     },
   },
 
   footer: {
-    copyright: 'Nena Craft Bakery',
+    copyright: 'The Cape',
     columns: [
       {
         title: 'Explore',
         links: [
-          { label: 'About', href: '/about' },
-          { label: 'Pastries', href: '/pastries' },
+          { label: 'Home', href: '/' },
           { label: 'Menu', href: '/menu' },
-          { label: 'Locations', href: '/locations' },
+          { label: 'Events', href: '/events' },
         ],
       },
       {
-        title: 'Info',
+        title: 'Opening Hours',
         links: [
-          { label: 'Contact', href: '/locations#contact' },
-          { label: 'Careers', href: '/careers' },
-          { label: 'Privacy Policy', href: '/privacy' },
+          { label: 'Mon - Sat: 8am - 4pm', href: '#' },
+          { label: 'Sunday: 9.30am - 3pm', href: '#' },
         ],
       },
     ],
     social: {
-      instagram: 'https://www.instagram.com/nena_craftbakery',
-      facebook: 'https://www.facebook.com/p/Nena-Craft-Bakery-100094162370332',
-      tiktok: '',
+      instagram: 'https://www.instagram.com/thecapebeaconsfield',
+      facebook: 'https://www.facebook.com/thecapebeaconsfield',
     },
-    locations: [
-      {
-        name: 'Berkhamsted',
-        address: '214 High Street',
-      },
-      {
-        name: 'Amersham',
-        address: '53 Sycamore Road',
-      },
-    ],
+    location: {
+      name: 'Beaconsfield',
+      address: '6A Burkes Parade',
+      town: 'Beaconsfield',
+      postcode: 'HP9 1NN',
+    },
     contact: {
-      email: 'hello@nenacraftbakery.co.uk',
-      phone: '01234 567890',
+      email: 'info@thecapebeaconsfield.co.uk',
+      phone: '01494 681137',
     },
   },
 
   hero: {
-    slides: [
-      {
-        image: '/images/sourdough-loaves.jpg',
-        imageAlt: 'Fresh artisan sourdough bread',
-        heading: 'Freshly Baked, Every Day',
-        subheading: 'Artisan sourdough, pastries and speciality coffee in the heart of Buckinghamshire',
-        ctaText: 'View Our Menu',
-        ctaHref: '/menu',
-      },
-      {
-        image: '/images/croissants.jpg',
-        imageAlt: 'Fresh croissants and pastries',
-        heading: 'Handcrafted Pastries',
-        subheading: 'Buttery croissants, flaky danishes, and sweet treats baked fresh every morning',
-        ctaText: 'See Pastries',
-        ctaHref: '/pastries',
-      },
-      {
-        image: '/images/coffee-latte.jpg',
-        imageAlt: 'Speciality coffee latte art',
-        heading: 'Speciality Coffee',
-        subheading: 'Expertly roasted, carefully brewed - the perfect companion to your morning pastry',
-        ctaText: 'Visit Us',
-        ctaHref: '/locations',
-      },
-    ],
+    image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1920&q=80',
+    imageAlt: 'The Cape café interior',
+    heading: {
+      line1: 'for the love of',
+      line2: 'FOOD',
+      line3: 'WINE &',
+      line4: 'COFFEE',
+    },
   },
 
-  products: {
-    heading: 'Our Products',
-    subheading: 'Handcrafted with love using locally sourced, seasonal ingredients',
+  welcome: {
+    heading: 'Welcome to The Cape',
+    content: `The Cape restaurant has been in the heart of Beaconsfield New Town for over 19 years.
+
+Your 'local' that welcomes you through the door offering a respite from day to day, serving breakfasts, lunches & homebaked treats.
+
+On Friday and Saturday night, The Cape puts on her little black dress, serves up some gin cocktails & a delicious seasonal dinner menu.
+
+We cook to order - fresh, comforting & honest fare with a South African twist in honour of our roots.`,
+    ctaText: 'Make a Booking',
+    ctaHref: 'https://book.mysimpleerb.com/1019/the-cape-restaurant/?__type=text&__target=nw',
+  },
+
+  contact: {
+    address: {
+      line1: '6A Burkes Parade',
+      line2: 'Beaconsfield',
+      postcode: 'HP9 1NN',
+    },
+    phone: '01494 681137',
+    mapUrl: 'https://maps.google.com/?q=6A+Burkes+Parade+Beaconsfield+HP9+1NN',
+    hours: [
+      { days: 'Monday - Saturday', time: '8am - 4pm' },
+      { days: 'Sunday', time: '9.30am - 3pm' },
+    ],
+    groupNote: 'For groups over 8, events and private hire, please get in touch',
+  },
+
+  gallery: {
+    heading: 'From Our Kitchen',
     items: [
-      {
-        title: 'Sourdough Loaves',
-        image: '/images/bread-loaf.jpg',
-        href: '/pastries?category=sourdough',
-      },
-      {
-        title: 'Pastries & Viennoiserie',
-        image: '/images/croissants.jpg',
-        href: '/pastries?category=viennoiserie',
-      },
-      {
-        title: 'Cakes & Celebration',
-        image: '/images/cakes-display.jpg',
-        href: '/pastries?category=cakes',
-      },
-      {
-        title: 'Sweet Treats',
-        image: '/images/sweet-treats.jpg',
-        href: '/pastries?category=sweet',
-      },
-      {
-        title: 'Coffee & Drinks',
-        image: '/images/coffee-latte.jpg',
-        href: '/menu#drinks',
-      },
+      { image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80', caption: 'Koeksisters - the real thing!' },
+      { image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80', caption: 'Decadent dessert board' },
+      { image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80', caption: 'Breaking bread' },
+      { image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80', caption: 'Seriously delicious burger' },
+      { image: 'https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=80', caption: 'Famous Carrot Cake' },
+      { image: 'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=600&q=80', caption: 'Gluten Free sweetness' },
+      { image: 'https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80', caption: 'Bobotie the old fashioned way' },
+      { image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80', caption: 'Gooey Chocolate Brownies' },
     ],
   },
 
-  occasions: {
-    heading: 'Treats for Any Occasion',
-    subheading: "From birthday cakes to morning pastries, we've got you covered",
-    items: [
-      {
-        title: 'Best Sellers',
-        image: '/images/pastries-display.jpg',
-        href: '/pastries',
-      },
-      {
-        title: 'Celebration Cakes',
-        image: '/images/celebration-cake.jpg',
-        href: '/pastries?category=cakes',
-      },
-      {
-        title: 'Gifts & Hampers',
-        image: '/images/baked-goods.jpg',
-        href: '/pastries?category=gifts',
-      },
-      {
-        title: 'Seasonal Specials',
-        image: '/images/sweet-treats.jpg',
-        href: '/pastries?category=seasonal',
-      },
-    ],
-  },
-
-  visitUs: {
-    heading: 'Delivery and Pick Up',
-    subheading: 'Pop into one of our two locations or order ahead for collection',
-    options: [
-      {
-        title: 'Order Ahead',
-        description: 'Skip the queue - order online for collection at your preferred time',
-        icon: 'smartphone',
-        href: '/locations',
-      },
-      {
-        title: 'Cafe Dine-In',
-        description: 'Enjoy your treats in our cosy cafe with a freshly brewed coffee',
-        icon: 'coffee',
-        href: '/locations',
-      },
-      {
-        title: 'Catering & Events',
-        description: 'Let us make your special occasion even sweeter',
-        icon: 'calendar',
-        href: '/locations#contact',
-      },
+  menuPreview: {
+    heading: 'Our Menu',
+    intro: 'Fresh, comforting & honest fare with a South African twist. From hearty breakfasts to delicious lunches, there\'s something for everyone.',
+    buttons: [
+      { text: 'Dine-In Menu', href: '/menu?tab=dine-in' },
+      { text: 'Takeaway Menu', href: '/menu?tab=takeaway' },
     ],
   },
 
   catering: {
-    heading: 'Catering, Gifting & Events',
-    subheading: 'Our team is ready to make your event special with custom orders and catering packages. No occasion too big or small!',
-    ctaText: 'Get Started',
-    ctaHref: '/locations#contact',
-    image: '/images/cakes-display.jpg',
-    imageAlt: 'Beautiful celebration cakes display',
+    heading: 'Catering & Takeaway',
+    content: 'We are catering for outside events if you are in need of any yummy treats! Keep an eye on our Facebook and Instagram for updates.',
+    ctaText: 'Get in Touch',
+    ctaHref: 'tel:01494681137',
+    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80',
+    imageAlt: 'Catering boards and platters',
   },
 
-  newsletter: {
-    heading: 'Join Our Newsletter',
-    subheading: 'Get the freshest Nena updates, offers and a treat on your birthday!',
-    placeholder: 'Enter your email',
-    buttonText: 'Subscribe',
-  },
-
-  about: {
-    heading: 'Our Story',
-    intro: 'Baked with Love, Served with Care',
-    content: `At Nena Craft Bakery, we believe that great bread starts with great ingredients and even better intentions. Founded in the heart of Buckinghamshire, our bakery is a labour of love dedicated to the art of sourdough and artisan baking.
-
-Every loaf we bake begins with a 24-hour fermentation process, using only the finest organic flours and our carefully nurtured sourdough starter. This slow approach creates bread with exceptional flavour, beautiful texture, and natural goodness.
-
-We work closely with local farmers and suppliers to source seasonal ingredients, ensuring that every croissant, cake, and coffee reflects our commitment to quality and community. Our cafe is a gathering place for neighbours and friends, where the aroma of fresh bread fills the air and every visit feels like coming home.`,
-    image: '/images/bakery-counter.jpg',
-    imageAlt: 'Bakery counter with fresh baked goods',
-    values: [
+  events: {
+    heroTitle: 'Events',
+    heroSubtitle: "What's happening at The Cape",
+    upcomingTitle: 'Coming Up',
+    noEventsMessage: 'Check back soon for upcoming events, or follow us on social media for announcements',
+    upcoming: [
       {
-        title: 'Local & Seasonal',
-        description: 'We source ingredients from local farms and suppliers, celebrating the seasons in every bake.',
-        icon: 'leaf',
+        title: 'Friday Night Supper Club',
+        description: 'Join us for an evening of delicious South African-inspired cuisine, gin cocktails, and great company.',
+        date: 'Every Friday',
+        time: 'From 6pm',
+        ctaText: 'Book Now',
+        ctaHref: 'tel:01494681137',
       },
       {
-        title: 'Handcrafted Daily',
-        description: 'Every item is made fresh each morning by our skilled bakers using traditional techniques.',
-        icon: 'heart',
-      },
-      {
-        title: 'Community Focused',
-        description: 'We are proud to be part of our local community, supporting local causes and creating a welcoming space for all.',
-        icon: 'users',
+        title: 'Wine Tasting Evening',
+        description: 'Discover exceptional South African wines paired with specially crafted dishes.',
+        date: 'Coming Soon',
+        time: 'TBC',
+        ctaText: 'Learn More',
+        ctaHref: 'tel:01494681137',
       },
     ],
-  },
-
-  pastries: {
-    heading: 'Our Pastries',
-    subheading: 'Freshly baked every morning',
-    categories: ['All', 'Viennoiserie', 'Sweet Pastries', 'Savoury', 'Cakes', 'Sourdough'],
-    items: [
-      {
-        name: 'Classic Croissant',
-        description: 'Buttery, flaky layers of perfection',
-        price: '3.50',
-        category: 'Viennoiserie',
-        image: '/images/croissants.jpg',
-      },
-      {
-        name: 'Pain au Chocolat',
-        description: 'Classic chocolate-filled pastry',
-        price: '3.95',
-        category: 'Viennoiserie',
-        image: '/images/pastries-display.jpg',
-      },
-      {
-        name: 'Almond Croissant',
-        description: 'Filled with frangipane, topped with flaked almonds',
-        price: '4.50',
-        category: 'Viennoiserie',
-        image: '/images/croissants.jpg',
-      },
-      {
-        name: 'Cinnamon Bun',
-        description: 'Soft, swirled with cinnamon and topped with cream cheese frosting',
-        price: '4.25',
-        category: 'Sweet Pastries',
-        image: '/images/sweet-treats.jpg',
-      },
-      {
-        name: 'Cardamom Bun',
-        description: 'Swedish-style with aromatic cardamom and pearl sugar',
-        price: '4.25',
-        category: 'Sweet Pastries',
-        image: '/images/baked-goods.jpg',
-      },
-      {
-        name: 'Danish Pastry',
-        description: 'Seasonal fruit and vanilla custard',
-        price: '4.50',
-        category: 'Sweet Pastries',
-        image: '/images/pastries-display.jpg',
-      },
-      {
-        name: 'Sausage Roll',
-        description: 'Flaky pastry with premium pork filling',
-        price: '4.50',
-        category: 'Savoury',
-        image: '/images/baked-goods.jpg',
-      },
-      {
-        name: 'Cheese & Ham Croissant',
-        description: 'Gruyere cheese and oak-smoked ham',
-        price: '4.95',
-        category: 'Savoury',
-        image: '/images/croissants.jpg',
-      },
-      {
-        name: 'Spinach & Feta Swirl',
-        description: 'Flaky pastry with spinach and tangy feta',
-        price: '4.50',
-        category: 'Savoury',
-        image: '/images/pastries-display.jpg',
-      },
-      {
-        name: 'Victoria Sponge',
-        description: 'Classic British cake with jam and cream',
-        price: '4.95',
-        category: 'Cakes',
-        image: '/images/cakes-display.jpg',
-      },
-      {
-        name: 'Carrot Cake',
-        description: 'Moist spiced cake with cream cheese frosting',
-        price: '4.95',
-        category: 'Cakes',
-        image: '/images/celebration-cake.jpg',
-      },
-      {
-        name: 'Chocolate Brownie',
-        description: 'Rich, fudgy, and deeply chocolatey',
-        price: '3.95',
-        category: 'Cakes',
-        image: '/images/sweet-treats.jpg',
-      },
-      {
-        name: 'Classic Sourdough',
-        description: 'Our signature 24-hour fermented loaf',
-        price: '5.50',
-        category: 'Sourdough',
-        image: '/images/sourdough-loaves.jpg',
-      },
-      {
-        name: 'Seeded Sourdough',
-        description: 'Packed with sunflower, pumpkin and sesame seeds',
-        price: '6.00',
-        category: 'Sourdough',
-        image: '/images/bread-loaf.jpg',
-      },
-      {
-        name: 'Focaccia',
-        description: 'Olive oil, rosemary and sea salt',
-        price: '5.95',
-        category: 'Sourdough',
-        image: '/images/sourdough-loaves.jpg',
-      },
+    pastTitle: 'Previous Events',
+    pastEvents: [
+      { image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80', caption: 'Wine Tasting Night' },
+      { image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80', caption: 'Supper Club Evening' },
+      { image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80', caption: 'Private Celebration' },
     ],
+    privateHire: {
+      heading: 'Host Your Event With Us',
+      content: "Looking to book The Cape for a private function? We'd love to help make your event special. Get in touch to discuss options.",
+      ctaText: 'Enquire Now',
+      ctaHref: 'tel:01494681137',
+    },
+    socialCta: {
+      text: 'Want to stay updated? Follow us on Instagram and Facebook',
+    },
   },
 
   menu: {
     heading: 'Our Menu',
-    subheading: 'Sourdough, pastries, speciality coffee & more',
-    note: 'Menus may vary by location. Pop in to see today\'s selection!',
-    dietaryKey: [
-      { label: 'V', description: 'Vegetarian' },
-      { label: 'VG', description: 'Vegan' },
-      { label: 'GF', description: 'Gluten-Free Available' },
-    ],
-    sections: [
-      {
-        title: 'Bakery',
-        categories: [
-          {
-            name: 'Sourdough Loaves',
-            items: [
-              { name: 'Classic White Sourdough', price: '5.50', dietary: ['V'] },
-              { name: 'Seeded Sourdough', price: '6.00', dietary: ['V', 'VG'] },
-              { name: 'Rye Sourdough', price: '6.00', dietary: ['V', 'VG'] },
-              { name: 'Olive & Rosemary Focaccia', price: '5.95', dietary: ['V', 'VG'] },
-            ],
-          },
-          {
-            name: 'Pastries & Viennoiserie',
-            items: [
-              { name: 'Classic Croissant', price: '3.50', dietary: ['V'] },
-              { name: 'Pain au Chocolat', price: '3.95', dietary: ['V'] },
-              { name: 'Almond Croissant', price: '4.50', dietary: ['V'] },
-              { name: 'Cinnamon Bun', price: '4.25', dietary: ['V'] },
-            ],
-          },
-          {
-            name: 'Sweet Treats',
-            items: [
-              { name: 'Chocolate Brownie', price: '3.95', dietary: ['V', 'GF'] },
-              { name: 'Victoria Sponge Slice', price: '4.95', dietary: ['V'] },
-              { name: 'Carrot Cake', price: '4.95', dietary: ['V'] },
-              { name: 'Lemon Drizzle', price: '4.50', dietary: ['V'] },
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Cafe',
-        categories: [
-          {
-            name: 'Breakfast',
-            items: [
-              { name: 'Sourdough Toast & Jam', price: '4.50', dietary: ['V', 'VG'] },
-              { name: 'Avocado on Sourdough', price: '8.95', dietary: ['V', 'VG'] },
-              { name: 'Eggs Your Way on Toast', price: '7.95', dietary: ['V', 'GF'] },
-              { name: 'Full English', price: '12.95', dietary: ['GF'] },
-              { name: 'Veggie Breakfast', price: '11.95', dietary: ['V', 'GF'] },
-            ],
-          },
-          {
-            name: 'Lunch',
-            items: [
-              { name: 'Soup of the Day', price: '6.95', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Grilled Cheese Toastie', price: '7.95', dietary: ['V'] },
-              { name: 'Ham & Cheese Toastie', price: '8.50', dietary: [] },
-              { name: 'Seasonal Salad', price: '9.95', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Quiche of the Day', price: '8.95', dietary: ['V'] },
-            ],
-          },
-          {
-            name: 'Kids Menu',
-            items: [
-              { name: 'Mini Toast Soldiers', price: '3.95', dietary: ['V'] },
-              { name: 'Cheese Toastie', price: '5.50', dietary: ['V'] },
-              { name: 'Mini Pancakes', price: '5.95', dietary: ['V'] },
-            ],
-          },
-        ],
-      },
-      {
-        title: 'Drinks',
-        categories: [
-          {
-            name: 'Speciality Coffee',
-            items: [
-              { name: 'Espresso', price: '2.50', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Americano', price: '3.20', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Flat White', price: '3.80', dietary: ['V', 'GF'] },
-              { name: 'Latte', price: '3.80', dietary: ['V', 'GF'] },
-              { name: 'Cappuccino', price: '3.80', dietary: ['V', 'GF'] },
-              { name: 'Oat Milk +', price: '0.50', dietary: ['VG'] },
-            ],
-          },
-          {
-            name: 'Tea & Hot Drinks',
-            items: [
-              { name: 'English Breakfast Tea', price: '2.80', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Earl Grey', price: '2.80', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Herbal Tea Selection', price: '3.00', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Hot Chocolate', price: '3.95', dietary: ['V', 'GF'] },
-              { name: 'Chai Latte', price: '4.20', dietary: ['V', 'GF'] },
-            ],
-          },
-          {
-            name: 'Cold Drinks',
-            items: [
-              { name: 'Iced Latte', price: '4.20', dietary: ['V', 'GF'] },
-              { name: 'Iced Americano', price: '3.50', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Fresh Orange Juice', price: '3.95', dietary: ['V', 'VG', 'GF'] },
-              { name: 'Homemade Lemonade', price: '3.50', dietary: ['V', 'VG', 'GF'] },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-
-  locations: {
-    heading: 'Find Us',
-    subheading: 'Two locations, one love for great food',
-    sites: [
-      {
-        name: 'Berkhamsted',
-        address: '214 High Street, Berkhamsted',
-        postcode: 'HP4 1AG',
-        image: '/images/bakery-interior-1.jpg',
-        hours: [
-          { days: 'Mon - Fri', time: '8am - 5pm' },
-          { days: 'Saturday', time: '8am - 5pm' },
-          { days: 'Sunday', time: '9am - 4pm' },
-        ],
-        mapUrl: 'https://maps.google.com/?q=214+High+Street+Berkhamsted',
-      },
-      {
-        name: 'Amersham',
-        address: '53 Sycamore Road, Amersham',
-        postcode: 'HP6 5EQ',
-        image: '/images/cafe-interior.jpg',
-        hours: [
-          { days: 'Mon - Fri', time: '8am - 5pm' },
-          { days: 'Saturday', time: '8am - 5pm' },
-          { days: 'Sunday', time: '9am - 4pm' },
-        ],
-        mapUrl: 'https://maps.google.com/?q=53+Sycamore+Road+Amersham',
-      },
-    ],
-    contact: {
-      heading: 'Get in Touch',
-      email: 'hello@nenacraftbakery.co.uk',
-      phone: '01234 567890',
-      form: {
-        heading: 'Send us a message',
-        fields: {
-          name: { label: 'Name', placeholder: 'Your name' },
-          email: { label: 'Email', placeholder: 'you@example.com' },
-          message: { label: 'Message', placeholder: 'How can we help?' },
+    subheading: 'Fresh, comforting & honest fare with a South African twist',
+    tabs: ['Dine-In', 'Takeaway'],
+    dineIn: {
+      note: 'Kitchen open 8am-3pm Monday-Saturday and 9.30am-2.30pm on Sunday (Bank Holiday hours may differ)',
+      sections: [
+        {
+          title: 'Light Breakfast',
+          subtitle: 'Served until 12pm Mon-Fri / All day Sat+Sun',
+          items: [
+            { name: 'Cape Kitchen Granola', description: 'with yoghurt, berry compote and drizzled with honey' },
+            { name: 'Bowl of Porridge', description: 'creamy oats with a choice of toasted almonds / berry compote / honey or banana' },
+            { name: 'Eggs on Toast', description: '2 poached, fried or scrambled eggs on choice of buttered toast' },
+            { name: 'French Toast', description: 'with homemade berry compote, Greek yoghurt and honey' },
+          ],
         },
-        button: 'Send Message',
-      },
+        {
+          title: 'Signature Breakfasts',
+          subtitle: 'Served until 12pm Mon-Fri / All day Sat+Sun',
+          items: [
+            { name: 'Cape Town', description: 'Cape seed toast with rocket, tomatoes and bacon with either scrambled or poached eggs' },
+            { name: 'Farmers Breakfast', description: 'boerewors, bacon, mushroom, tomato, fried banana, 2 eggs of your choice and toast' },
+            { name: 'Greyton', description: '2 slices of cape seed bread with mashed avocado (Add 2 poached eggs)' },
+            { name: 'Mandela', description: 'potato rosti with 2 poached eggs and a rasher of bacon with chorizo and tomatoes' },
+            { name: 'Elgin', description: 'potato rosti, sliced avocado, rocket, smoked salmon and poached eggs' },
+            { name: 'The V (Vegetarian)', description: 'potato rosti, spinach, mushroom, tomatoes and avocado with baked beans' },
+            { name: 'The Royale', description: 'smoked salmon / spinach / ham or bacon - toasted cape seed or sourdough, poached eggs, hollandaise' },
+          ],
+        },
+        {
+          title: 'All Day Breakfast',
+          items: [
+            { name: 'Sausage Sandwich', description: 'three grilled Cumberland sausages between 2 slices of farmhouse granary or white bread (Add a fried egg)' },
+            { name: 'Bacon Sandwich', description: 'three slices of grilled bacon between 2 slices of farmhouse granary or white bread (Add a fried egg)' },
+            { name: 'BIG 5', description: 'scrambled or fried eggs, tomatoes, mushroom, Cumberland sausage, bacon and toast (Add baked beans / Add rosti)' },
+            { name: 'Three Egg Omelette', description: 'ham and cheese or spinach, cheese and mushroom (Add toast or add chips)' },
+          ],
+        },
+        {
+          title: 'Roosterbrood',
+          subtitle: 'South African fire cooked roll',
+          items: [
+            { name: 'Cumberland Sausage', description: 'caramelised red onion chutney, cheese, wholegrain mustard and mayo' },
+            { name: 'Smoked Salmon', description: 'dill crème fraiche, avocado and rocket' },
+          ],
+        },
+        {
+          title: 'Cape Salad Bar',
+          subtitle: 'Available Mon-Fri',
+          items: [
+            { name: 'Pick 1 main and up to 3 salads', description: 'or pick up to 4 salads' },
+            { name: 'Homemade soup', description: 'served with cape seed bread' },
+          ],
+        },
+        {
+          title: 'Closed Sandwiches',
+          items: [
+            { name: 'Cape Malay chicken and banana chutney', description: '' },
+            { name: 'Tuna mayo with spring onion', description: '' },
+            { name: 'Free range egg mayo and rocket', description: '' },
+            { name: 'Bacon, lettuce and tomato', description: '' },
+          ],
+        },
+        {
+          title: 'Open Sandwiches',
+          subtitle: 'Cape seed / sourdough / white / brown / gluten-free / wraps',
+          items: [
+            { name: 'Chargrilled Chicken', description: 'avocado, tomato, coriander and lime dressing, spiced Malay chutney' },
+            { name: 'Chargrilled Chicken Caesar', description: 'with bacon, avocado, cos and parmesan' },
+            { name: 'Prawn Marie Rose', description: 'with cos, avocado, coriander and ground black pepper' },
+            { name: 'Scottish Smoked Salmon', description: 'with avocado, cucumber and dill crème fraiche' },
+            { name: 'Open Vegan', description: 'cape seed bread with avocado, rocket, chargrilled vegetables and hummus' },
+          ],
+        },
+        {
+          title: 'Toasted Sandwiches',
+          subtitle: 'Sourdough / brown / white',
+          items: [
+            { name: 'Cheese and red onion / Cheese and tomato', description: '' },
+            { name: 'Cheese and ham', description: '' },
+            { name: 'Tuna, cheese and red onion', description: '' },
+            { name: 'Chicken mayo, red onion, bacon & mozzarella', description: '' },
+            { name: 'Mushroom, spinach, red onion and cheese', description: '' },
+            { name: 'Reuben', description: 'salt beef, cheese, pickled cabbage and mayo' },
+            { name: 'Buffalo mozzarella, tomato and basil', description: '' },
+            { name: 'Add-ons', description: 'Add chips / Add sweet potato fries / Add mini house salad' },
+          ],
+        },
+        {
+          title: 'From the Chargrill',
+          items: [
+            { name: 'Beef Burger', description: 'Homemade 8oz Aberdeen Angus beef burger served in a seeded bun, mayo, tomato, red onion, gherkin and chips (Add cheese and/or bacon)' },
+            { name: 'Skinny Burger', description: 'no bun, large mixed salad with feta, onion, olives, pumpkin seeds and avocado (Add cheese and/or bacon)' },
+            { name: 'Boerewors Burger', description: 'boerewors served in a seeded bun with homemade chakalaka, mayonnaise and chips' },
+            { name: 'Cape Triple Decker Vegan Club', description: 'sweet potato and black bean, avocado, spiced aioli, chakalaka, cos' },
+            { name: 'Cape Classic Triple Decker Club', description: 'chicken, tomato, bacon, egg, mayo and mixed leaves' },
+            { name: 'Steak Roosterbrood', description: 'with mayo, red onion chutney, rocket, tomato and chips' },
+          ],
+        },
+        {
+          title: 'Salads',
+          items: [
+            { name: 'House Salad', description: 'mixed leaves, avocado, feta, red onion, chargrilled veg, olives, toasted pumpkin seeds and house dressing' },
+            { name: 'Caesar', description: 'cos lettuce, warm chargrilled chicken breast, egg, homemade croutons, parmesan shavings and Caesar dressing' },
+            { name: 'Goats', description: 'mixed leaves, warmed chargrilled vegetables and goat\'s cheese with house dressing' },
+            { name: 'Malay', description: 'tempura king prawns, avocado, spring onions, mixed leaves, mango and corn salsa with coriander and a mild chilli dressing' },
+            { name: 'South Easter', description: 'warm teriyaki chicken breast with noodles, mixed leaves, shredded carrot, ginger, coriander and toasted sesame seeds' },
+          ],
+        },
+        {
+          title: 'Coffee',
+          items: [
+            { name: 'Americano, Cappuccino, Latte', description: '' },
+            { name: 'Espresso, Double Espresso', description: '' },
+            { name: 'Macchiato (single/double), Cortado', description: '' },
+            { name: 'Mocha, Flat White, Cafetiere', description: '' },
+            { name: 'Add syrups', description: '' },
+          ],
+        },
+        {
+          title: 'Teas',
+          subtitle: 'All loose leaf',
+          items: [
+            { name: 'Breakfast, Earl Grey, Moroccan Mint', description: '' },
+            { name: 'Lemon and Ginger, Green, Berry Punch, Rooibos', description: '' },
+            { name: 'Tea bags: Camomile, Assam', description: '' },
+            { name: 'Hot water and Lemon', description: '' },
+          ],
+        },
+        {
+          title: 'Hot Chocolate',
+          items: [
+            { name: 'Luxury Melt', description: 'milk, dark or white' },
+            { name: 'Cadburys', description: '' },
+            { name: 'Add cream / Add marshmallows', description: '' },
+          ],
+        },
+        {
+          title: 'Smoothies & Shakes',
+          items: [
+            { name: 'Fruit or veggie smoothies', description: 'ask the team for daily flavours' },
+            { name: 'Shakes', description: 'Vanilla, strawberry, chocolate, peanut butter or banoffee (served with cream and toppings)' },
+          ],
+        },
+        {
+          title: 'Cold Drinks',
+          items: [
+            { name: 'Still / Sparkling water (small/large)', description: '' },
+            { name: 'Freshly squeezed OJ', description: '' },
+            { name: 'Cloudy organic apple', description: '' },
+            { name: 'Cranberry / Tropical', description: '' },
+            { name: 'Elderflower or Ginger Beer', description: '' },
+            { name: 'Coke / Diet Coke / 7 Up', description: '' },
+            { name: 'San Pellegrino (lemon or blood orange)', description: '' },
+            { name: 'Tonic / Soda', description: '' },
+          ],
+        },
+        {
+          title: 'Beers, Booze & Bubbles',
+          items: [
+            { name: 'Mimosa, Bloody Mary', description: '' },
+            { name: 'Rebellion Lager / Blonde', description: '' },
+            { name: 'Becks Blue', description: '' },
+            { name: 'Sxollie Cider', description: '' },
+            { name: 'House White (175ml or bottle)', description: '' },
+            { name: 'House Red (175ml or bottle)', description: '' },
+            { name: 'Prosecco (glass or bottle)', description: '' },
+          ],
+        },
+      ],
+      cakesNote: 'Cakes, scones, pastries and sweet treats - all available from our bar. Please just ask the team!',
+      allergenNote: 'Please advise your waiting staff of any allergies or food intolerances prior to ordering. Menu items may contain trace levels of allergens due to the way products are prepared.',
+    },
+    takeaway: {
+      note: 'Allow 10-20 minutes for all orders',
+      sections: [
+        {
+          title: 'Daily Deli',
+          items: [
+            { name: 'Meat/Fish and Salad', description: '' },
+            { name: 'Meat/Fish Only', description: '' },
+            { name: 'Quiche Only', description: '' },
+            { name: '2 Salad Box', description: '' },
+            { name: '3 Salad Box', description: '' },
+            { name: 'Daily Soup and Homemade Bread', description: '' },
+          ],
+        },
+        {
+          title: 'Salads',
+          items: [
+            { name: 'Goats Cheese Salad with Med Veggies', description: '' },
+            { name: 'House Salad with Feta', description: '' },
+            { name: 'Caesar Salad with Egg and Chicken', description: '' },
+          ],
+        },
+        {
+          title: 'Roosterbrood',
+          items: [
+            { name: 'Cumberland Sausage Roosterbrood', description: '' },
+            { name: 'Smoked Salmon Roosterbrood', description: '' },
+            { name: 'Steak Roosterbrood with Chips', description: '' },
+          ],
+        },
+        {
+          title: 'Burgers',
+          items: [
+            { name: 'Homemade Beef Burger with Chips', description: '' },
+            { name: 'Boerewors Burger with Chips', description: '' },
+          ],
+        },
+        {
+          title: 'Sandwiches',
+          items: [
+            { name: 'Tuna Mayo with Spring Onion', description: '' },
+            { name: 'Egg Mayo with Rocket', description: '' },
+            { name: 'BLT', description: '' },
+            { name: 'Cape Malay Chicken and Banana Chutney', description: '' },
+            { name: 'Chargrilled Chicken', description: 'with Avocado, Tomato, Coriander, Malay Chutney and Mayo' },
+            { name: 'Smoked Salmon', description: 'Cucumber, Avocado, Dill Crème Fraiche, Lettuce' },
+            { name: 'Open Hummus', description: 'Med Veggies, Avocado, Lettuce' },
+            { name: 'Prawn Marie Rose', description: 'with Cos, Avocado, Coriander' },
+            { name: 'Chargrilled Chicken Caesar', description: 'with Avocado, Bacon, Cos, Parmesan and Caesar Dressing' },
+          ],
+        },
+        {
+          title: 'Toasties',
+          items: [
+            { name: 'Ham and Cheese', description: '' },
+            { name: 'Cheese and Tomato', description: '' },
+            { name: 'Cheese and Red Onion', description: '' },
+            { name: 'Chicken Mayo, Red Onion, Bacon and Cheese', description: '' },
+            { name: 'Tuna Mayo, Red Onion, Cheese', description: '' },
+            { name: 'Mushroom, Red Onion, Spinach and Cheese', description: '' },
+            { name: 'Reuben with Pickles', description: '' },
+            { name: 'Mozzarella, Tomato, Basil', description: '' },
+            { name: 'Cape Classic Club Sandwich', description: '' },
+            { name: 'Cape Vegan Classic Club', description: '' },
+            { name: 'Add-ons', description: 'Add chips or sweet potato fries' },
+          ],
+        },
+        {
+          title: 'Cakes & Treats',
+          items: [
+            { name: 'Cake, Scone', description: '' },
+            { name: 'White Chocolate or Chocolate Cookie', description: '' },
+            { name: 'Flapjack / Brownie', description: '' },
+            { name: 'Love Cake', description: '' },
+            { name: 'Vegan Chocolate Cake', description: '' },
+            { name: 'Carrot Cake', description: '' },
+            { name: 'Chocolate Pastry Cake', description: '' },
+            { name: 'Wheat Free Orange Polenta Cake', description: '' },
+          ],
+        },
+        {
+          title: 'Hot Drinks',
+          items: [
+            { name: 'Single Espresso, Double Espresso', description: '' },
+            { name: 'Americano, Cappuccino/Latte, Mocha', description: '' },
+            { name: 'Chai Latte', description: '' },
+            { name: 'Cadburys Hot Chocolate, Hot Chocolate Melt', description: '' },
+            { name: 'Tea', description: '' },
+            { name: 'Add-ons', description: 'Extra shot / Add syrup / Add cream' },
+            { name: 'Alternatives', description: 'Decaf / Soya / Almond / Oat / Coconut available' },
+          ],
+        },
+        {
+          title: 'Cold Drinks',
+          items: [
+            { name: 'Daily Smoothies', description: '' },
+            { name: 'Daily Milkshakes', description: '' },
+            { name: 'Fresh OJ', description: '' },
+            { name: 'Selection of Soft Drinks', description: '' },
+            { name: 'Fanta Grape and Cream Soda', description: '' },
+          ],
+        },
+      ],
+      footerNote: 'For any large takeaway orders or sample menus for catering functions please call the team directly on 01494 681137',
     },
   },
 
@@ -552,19 +504,19 @@ We work closely with local farmers and suppliers to source seasonal ingredients,
     heading: 'What Our Customers Say',
     entries: [
       {
-        quote: 'The best sourdough I have ever tasted! The crust is perfectly crispy and the inside is so soft and flavourful. A must-visit bakery.',
-        name: 'Emma S.',
-        location: 'Berkhamsted',
+        quote: 'The best brunch spot in Beaconsfield! The South African touches make it so unique. Love the boerewors burger!',
+        name: 'Sarah M.',
+        location: 'Beaconsfield',
       },
       {
-        quote: 'My go-to spot for weekend brunch. The pastries are incredible and the coffee is exactly how I like it. The staff are always so welcoming!',
-        name: 'James & Sophie',
-        location: 'Amersham',
+        quote: 'We\'ve been coming to The Cape for years. It truly feels like our local - warm, welcoming, and the food is always delicious.',
+        name: 'The Johnson Family',
+        location: 'Beaconsfield',
       },
       {
-        quote: 'Ordered a birthday cake for my daughter and it was absolutely stunning. Not only beautiful but delicious too. Will definitely be back!',
-        name: 'Rachel T.',
-        location: 'Chesham',
+        quote: 'Friday night supper club is a hidden gem. Amazing food, great wine, lovely atmosphere. Can\'t recommend it enough!',
+        name: 'David & Emma',
+        location: 'Gerrards Cross',
       },
     ],
   },
